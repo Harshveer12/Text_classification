@@ -6,8 +6,6 @@ I have the following python files that help implement the pipeline
 *monitoring.py* with class *Monitoring*
 *retraining.py* with class *Retrain*
 
-## THIS ZIP FILE ALSO CONTAINS THE MODEL I TRAINED IN THE model DIRECTORY
-
 Basic workflow is *initializing.py* makes training testing and validation sets for model. *MakeModel* is used to initialize the model with all the hyperparameters 
 
 Next *Training* class makes a *MakeModel* object, initilises it and compiles it with an optimizer. It then fits the model on the data from an object of *Initialize* class and saves it for future use
@@ -97,10 +95,6 @@ If the drift is above a threshold it triggers retraining.
 5. Retraining Logic -
 Retraining is triggered by monitoring.py script when the drift is unacceptable. 
 Retrain class takes the latest data and combines it with the older data and retrains the model on this combined data using the fit method of Training class and saves the newly retrained model if it is accurate enough
-
-
-
-**{due to time constraint, could  not deploy model for monitoring to work in the background}**
 
 
 
